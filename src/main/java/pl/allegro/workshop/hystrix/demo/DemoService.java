@@ -6,10 +6,12 @@ import org.springframework.stereotype.Component;
 public class DemoService {
     private boolean throwsError;
     private int delay;
+    private boolean throwsClientError;
 
     public DemoService() {
         this.throwsError = false;
         this.delay = 0;
+        this.throwsClientError = false;
     }
 
     public boolean throwsError() {
@@ -26,5 +28,13 @@ public class DemoService {
 
     public void setDelay(int delay) {
         this.delay = delay;
+    }
+
+    public boolean throwsClientError() {
+        return throwsClientError;
+    }
+
+    public void setThrowsClientError(boolean throwsClientError) {
+        this.throwsClientError = throwsClientError;
     }
 }
